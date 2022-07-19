@@ -12,7 +12,12 @@
 int main(int argc, char *argv[]) {
     double crit_conversion = 1e-14;
     
-    Polynomial_t poly = reading();
+    Polynomial_t poly;
+
+    poly.degree = 2;
+    double arr[3] = {1, -3, 2};
+    poly.coefficients = arr;
+
     double* roots = newton(poly, crit_conversion);
 
     if (roots[0] == DBL_MAX) {
