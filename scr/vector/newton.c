@@ -6,9 +6,7 @@
 #include <math.h>
 #include <riscv_vector.h>
 #include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include "freePoly.h"
+#include "printf.h"
 #include "longDiv.h"
 #include "derivative.h"
 #include "horner.h"
@@ -137,9 +135,6 @@ double* newton(Polynomial_t poly, double convCrit) {
         }
         polyDeriv = derivative(newPoly);
     }
-    free(xGuess);
-    freePoly(&newPoly);
-    freePoly(&polyDeriv);
 
     qsort(roots, poly.degree, sizeof(double), compare);
     

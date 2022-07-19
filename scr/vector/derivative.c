@@ -3,8 +3,8 @@
 /*--------------------------------------------------------------------*/
 
 #include <riscv_vector.h>
-#include <stdlib.h>
 #include "derivative.h"
+#include "printf.h"
 
 /*--------------------------------------------------------------------*/
 
@@ -56,7 +56,6 @@ Polynomial_t derivative(Polynomial_t myPoly) {
     }
 
     indices -= myPoly.degree;
-    free(indices);
 
     return differentiatedPoly;
 }

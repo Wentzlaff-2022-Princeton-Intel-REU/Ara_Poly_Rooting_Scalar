@@ -5,13 +5,11 @@
 #include <float.h>
 #include <math.h>
 #include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "derivative.h"
-#include "freePoly.h"
 #include "horner.h"
 #include "longDiv.h"
 #include "newton.h"
+#include "printf.h"
 
 /*--------------------------------------------------------------------*/
 
@@ -59,14 +57,11 @@ double* newton(Polynomial_t poly, double convCrit) {
         } while (diff > convCrit);
         roots[i] = xGuess;
 
-        freePoly(&newPoly);
-        freePoly(&polyDeriv);
 
         newPoly = longDiv(newPoly, xGuess, convCrit);
         polyDeriv = derivative(newPoly);
     }
-    freePoly(&newPoly);
-    freePoly(&polyDeriv);
+
 
     qsort(roots, n, sizeof(double), compare);
     
