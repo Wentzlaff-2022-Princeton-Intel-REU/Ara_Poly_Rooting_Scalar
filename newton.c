@@ -67,11 +67,9 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
         } while (diff > convCrit);
         roots[i] = xGuess;
 
-        if (!fabs(poly->coefficients[0] + root * a_n[0]) > convCrit) {
-          double arr2 [poly.degree];
-          poly.coefficients = arr2;
-          longDiv(&poly, xGuess, convCrit);
-        }
+        double arr2 [poly.degree];
+        poly.coefficients = arr2;
+        longDiv(&poly, xGuess, convCrit);
         printf("New Polynomial:\n");
         printf("%d\n", poly.degree);
         for (int i = poly.degree; i > 0; i--) {
