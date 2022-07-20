@@ -5,6 +5,7 @@
 #include <float.h>
 #include <math.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include "derivative.h"
 #include "horner.h"
 #include "longDiv.h"
@@ -62,6 +63,4 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
 
 
     qsort(roots, n, sizeof(double), compare);
-    
-    return roots;
 }
