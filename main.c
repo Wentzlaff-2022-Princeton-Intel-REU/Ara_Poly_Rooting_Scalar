@@ -9,7 +9,7 @@
 
 /*--------------------------------------------------------------------*/
 
-int main(int argc, char *argv[]) {
+int main() {
     double crit_conversion = 1e-14;
     
     Polynomial_t poly;
@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
     poly.coefficients = arr;
 
 
-    double roots [n];
+    double roots [poly.degree];
     newton(poly, &roots, crit_conversion);
 
     if (roots[0] == DBL_MAX) {
