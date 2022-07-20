@@ -22,7 +22,7 @@ int main() {
     for (int i = poly.degree; i > 0; i--) {
         printf("%.1f * x^%d + ", poly.coefficients[i], i);
     }
-    printf("%.1\n\n", poly.coefficients[0]);
+    printf("%.1f\n\n", poly.coefficients[0]);
 
     double roots [poly.degree];
     start_timer();
