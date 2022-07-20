@@ -49,17 +49,17 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
           diff = fabs(xGuess - oldXGuess);;
          // printf("guess: %lf, oldGuess: %lf, oldDiff: %lf, diff: %lf\n", xGuess, oldXGuess, oldDiff, diff);
 
-          // if (!firstLoop && diff > oldDiff && fabs(diff - oldDiff) > 1) {
-          //   printf("exited too soon!\n");
-          //   return;
-          // }
+          if (!firstLoop && diff > oldDiff && fabs(diff - oldDiff) > 1) {
+            printf("exited too soon!\n");
+            return;
+          }
 
           firstLoop = false;
         } while (diff > convCrit);
         roots[i] = xGuess;
 
         newPoly = longDiv(newPoly, xGuess, convCrit);
-        newPoly = derivative(newPoly);
+        polyDeriv = derivative(newPoly);
     }
 
     qsort(roots, n, sizeof(double), compare);
