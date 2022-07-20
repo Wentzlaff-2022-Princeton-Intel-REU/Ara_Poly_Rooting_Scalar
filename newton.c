@@ -76,12 +76,12 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
         printf("%.1f\n\n", poly.coefficients[0]);
 
         derivative(poly, &polyDeriv);
-        // printf("Deriv Polynomial:\n");
-        // printf("%d\n", polyDeriv.degree);
-        // for (int i = polyDeriv.degree; i > 0; i--) {
-        //     printf("%.1f * x^%d + ", polyDeriv.coefficients[i], i);
-        // }
-        // printf("%.1f\n\n", polyDeriv.coefficients[0]);
+        printf("Deriv Polynomial:\n");
+        printf("%d\n", polyDeriv.degree);
+        for (int i = polyDeriv.degree; i > 0; i--) {
+            printf("%.1f * x^%d + ", polyDeriv.coefficients[i], i);
+        }
+        printf("%.1f\n\n", polyDeriv.coefficients[0]);
     }
 
     qsort(roots, n, sizeof(double), compare);
