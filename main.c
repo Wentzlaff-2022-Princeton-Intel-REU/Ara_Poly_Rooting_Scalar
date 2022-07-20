@@ -19,9 +19,9 @@ int main() {
     printf("test 1\n");
     printf("Polynomial:\n");
     for (int i = poly.degree; i > 0; i--) {
-        printf("%.3g * x^%d + ", poly.coefficients[i], i);
+        printf("%.3f * x^%d + ", poly.coefficients[i], i);
     }
-    printf("%.3g\n", poly.coefficients[0]);
+    printf("%.3f\n", poly.coefficients[0]);
 
     printf("test 2\n");
     double roots [poly.degree];
