@@ -18,7 +18,7 @@ int main() {
     poly.coefficients = arr;
     printf("test 1\n");
     printf("Polynomial:\n");
-    for (int i = poly.degree; i > 0; i++) {
+    for (int i = poly.degree; i > 0; i--) {
         printf("%.3lg * x^%d + ", poly.coefficients[i], i);
     }
     printf("%.3lg\n", poly.coefficients[0]);
