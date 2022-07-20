@@ -11,7 +11,6 @@
 void longDiv(Polynomial_t* poly, double root, double diff) {
     int n = poly->degree - 1;
     double a_n [n + 1];
-    poly->coefficients = a_n;
 
     a_n[n] = poly->coefficients[n + 1];
     for (int i = n; i > 0; i--) {
@@ -23,11 +22,14 @@ void longDiv(Polynomial_t* poly, double root, double diff) {
         return;
     }
 
- //   Polynomial_t quotient;
- //   quotient.degree = n;
-  //  quotient.coefficients = a_n;
+    poly->coefficients = a_n;
+    for (int i = n; i >= 0; i--) {
+        printf("i = %d, a_n[i] = %.1f\n", i, poly->coefficients[i]);
+    }
 
-    
+    // Polynomial_t quotient;
+    // quotient.degree = n;
+    // quotient.coefficients = a_n;
 
-   //  poly = quotient;
+    // poly = quotient;
 }
