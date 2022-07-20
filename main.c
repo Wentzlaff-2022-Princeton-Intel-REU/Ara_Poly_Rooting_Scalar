@@ -15,7 +15,7 @@ int main() {
 
     Polynomial_t poly;
     poly.degree = 5;
-    double arr[6] = {1, 3, -23, -51, 94, 120};
+    double arr[6] = {120, 94, -51, -23, 3, 1};
     poly.coefficients = arr;
 
     printf("Polynomial:\n");
