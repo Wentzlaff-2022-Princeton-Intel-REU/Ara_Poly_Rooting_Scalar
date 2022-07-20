@@ -27,18 +27,22 @@ static int compare(const void * a, const void * b) {
 void newton(Polynomial_t poly, double* roots, double convCrit) {
     int n = poly.degree;
 
+    printf("test 0\n");
     for (int i = 0; i < n; i++) {
       roots[i] = DBL_MAX;
     }
 
+    printf("test 1\n");
     double xGuess = (double) rand()/ (double) rand();
     double oldXGuess = 0;
     double diff = xGuess;
     double oldDiff = 0;
 
+    printf("test 2\n");
     Polynomial_t newPoly = poly;
     Polynomial_t polyDeriv = derivative(poly);
     
+    printf("test 3\n");
     for (int i = 0; i < n; i++) {
       bool firstLoop = true;
         do { 
