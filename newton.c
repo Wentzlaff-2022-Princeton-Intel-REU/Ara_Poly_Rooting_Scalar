@@ -26,6 +26,7 @@ static int compare(const void * a, const void * b) {
 
 void newton(Polynomial_t poly, double* roots, double convCrit) {
     int n = poly.degree;
+    printf("%d\n", n);
 
     for (int i = 0; i < n; i++) {
       roots[i] = DBL_MAX;
@@ -49,6 +50,7 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
          // printf("guess: %lf, oldGuess: %lf, oldDiff: %lf, diff: %lf\n", xGuess, oldXGuess, oldDiff, diff);
 
           if (!firstLoop && diff > oldDiff && fabs(diff - oldDiff) > 1) {
+            printf("exited too soon!\n");n
             return;
           }
 
