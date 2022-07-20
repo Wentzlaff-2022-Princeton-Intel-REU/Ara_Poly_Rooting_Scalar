@@ -22,7 +22,7 @@ int main() {
     for (int i = poly.degree; i > 0; i--) {
         printf("%.1f * x^%d + ", poly.coefficients[i], i);
     }
-    printf("%.3f\n", poly.coefficients[0]);
+    printf("%.31\n\n", poly.coefficients[0]);
 
     double roots [poly.degree];
     start_timer();
@@ -42,7 +42,7 @@ int main() {
         }
     }
 
-    printf("Runtime (cycles): %d\n", cycle_time);
+    printf("\nRuntime (cycles): %d\n", cycle_time);
     
     return 0;
 }
