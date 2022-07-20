@@ -42,15 +42,15 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
     
     for (int i = 0; i < n; i++) {
       bool firstLoop = true;
-        do { ;
+        do {
           oldXGuess = xGuess;
-          xGuess -= horner(newPoly, xGuess) / horner(polyDeriv, xGuess);;
+          xGuess -= horner(newPoly, xGuess) / horner(polyDeriv, xGuess);
           oldDiff = diff;
           diff = fabs(xGuess - oldXGuess);;
          // printf("guess: %lf, oldGuess: %lf, oldDiff: %lf, diff: %lf\n", xGuess, oldXGuess, oldDiff, diff);
 
           if (!firstLoop && diff > oldDiff && fabs(diff - oldDiff) > 1) {
-            printf("exited too soon!\n");n
+            printf("exited too soon!\n")
             return;
           }
 
