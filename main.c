@@ -37,7 +37,7 @@ int main() {
             if (roots[i] == DBL_MAX) {
                 break;
             }
-            printf("The root approximation is: %x \n", roots[i]);
+            printf("The root approximation is: %.3 f \n", roots[i]);
         }
     }
 
