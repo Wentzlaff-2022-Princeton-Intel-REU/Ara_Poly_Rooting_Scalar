@@ -4,8 +4,8 @@
 
 #include <float.h>
 #include "newton.h"
-#include "reading.h"
 #include "printf.h"
+#include "reading.h"
 
 /*--------------------------------------------------------------------*/
 
