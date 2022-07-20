@@ -12,5 +12,5 @@ void derivative(Polynomial_t myPoly, Polynomial_t* differentiatedPoly) {
         differentiatedPoly->coefficients[i - 1] = myPoly.coefficients[i] * i;
     }
  
-    differentiatedPoly.degree = myPoly.degree - 1;
+    differentiatedPoly->degree = myPoly.degree - 1;
 }
