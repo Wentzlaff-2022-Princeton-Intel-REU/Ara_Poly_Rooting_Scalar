@@ -35,11 +35,14 @@ int main() {
         for (int i = 0; i < poly.degree; i++) {
             printf("test 5\n");
             if (roots[i] == DBL_MAX) {
+                printf("test 6\n");
                 break;
             }
-            printf("The root approximation is: %.3g \n", roots[i]);
+            printf("The root approximation is: %.3f \n", roots[i]);
+            printf("test 7\n");
         }
     }
+    printf("test 8\n");
     
     // for (int i = 0; i <= polyd.degree; i++) {
     //     printf("%lf \n", polyd.coefficients[i]);
