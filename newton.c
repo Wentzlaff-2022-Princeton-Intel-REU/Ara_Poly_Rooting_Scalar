@@ -58,7 +58,18 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
         roots[i] = xGuess;
 
         newPoly = longDiv(newPoly, xGuess, convCrit);
+        printf("New Polynomial:\n");
+        for (int i = newPoly.degree; i > 0; i--) {
+            printf("%.1f * x^%d + ", newPoly.coefficients[i], i);
+        }
+        printf("%.1f\n\n", newPoly.coefficients[0]);
+
         polyDeriv = derivative(newPoly);
+        printf("Deriv Polynomial:\n");
+        for (int i = polyDeriv.degree; i > 0; i--) {
+            printf("%.1f * x^%d + ", polyDeriv.coefficients[i], i);
+        }
+        printf("%.1f\n\n", polyDeriv.coefficients[0]);
     }
 
     qsort(roots, n, sizeof(double), compare);
