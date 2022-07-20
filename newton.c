@@ -24,8 +24,9 @@ static int compare(const void * a, const void * b) {
     return 0;  
 }
 
-void newton(Polynomial_t poly, double* roots, double convCrit) {
+double[] newton(Polynomial_t poly, double convCrit) {
     int n = poly.degree;
+    double roots[n];
 
     for (int i = 0; i < n; i++) {
       roots[i] = DBL_MAX;
@@ -60,7 +61,7 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
 
           if (!firstLoop && diff > oldDiff && fabs(diff - oldDiff) > 1) {
             printf("exited too soon!\n");
-            return;
+            return roots;
           }
 
           firstLoop = false;
@@ -83,6 +84,7 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
         // }
         // printf("%.1f\n\n", polyDeriv.coefficients[0]);
     }
-
     qsort(roots, n, sizeof(double), compare);
+
+    return roots;
 }
