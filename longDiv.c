@@ -23,7 +23,7 @@ void longDiv(Polynomial_t* poly, double root, double diff) {
     // }
 
     double arr2 [poly.degree];
-    poly.coefficients = arr2;
+    poly->coefficients = arr2;
 
     poly->coefficients = a_n;
     for (int i = n; i >= 0; i--) {
