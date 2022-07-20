@@ -8,7 +8,7 @@
 
 /*--------------------------------------------------------------------*/
 
-Polynomial_t longDiv(Polynomial_t poly, double root, double diff) {
+void longDiv(Polynomial_t* poly, double root, double diff) {
     int n = poly.degree - 1;
     double a_n [n + 1];
 
@@ -19,12 +19,8 @@ Polynomial_t longDiv(Polynomial_t poly, double root, double diff) {
 
     // printf("root: %.16lf, diff: %.16lf\n", root, (poly.coefficients[0] + root * a_n[0]));
     if (fabs(poly.coefficients[0] + root * a_n[0]) > diff) {
-        return poly;
+        return;
     }
 
-    Polynomial_t quotient;
-    quotient.degree = n;
-    quotient.coefficients = a_n;
-   
-    return quotient;
+    poly.coefficients = a_n;
 }

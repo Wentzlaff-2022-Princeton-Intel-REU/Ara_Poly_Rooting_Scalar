@@ -60,7 +60,7 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
         } while (diff > convCrit);
         roots[i] = xGuess;
 
-        newPoly = longDiv(newPoly, xGuess, convCrit);
+        longDiv(&newPoly, xGuess, convCrit);
         derivative(newPoly, &polyDeriv);
     }
 
