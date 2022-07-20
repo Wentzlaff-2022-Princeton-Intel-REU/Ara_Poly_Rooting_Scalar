@@ -37,6 +37,13 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
     double oldDiff = 0;
 
     Polynomial_t newPoly = poly;
+    printf("New Polynomial:\n");
+    printf("%d\n", newPoly.degree);
+    for (int i = newPoly.degree; i > 0; i--) {
+        printf("%.1f * x^%d + ", newPoly.coefficients[i], i);
+    }
+    printf("%.1f\n\n", newPoly.coefficients[0]);
+
     Polynomial_t polyDeriv;
     double arr[poly.degree];
     polyDeriv.coefficients = arr;
@@ -61,20 +68,20 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
         roots[i] = xGuess;
 
         longDiv(&newPoly, xGuess, convCrit);
-        printf("New Polynomial:\n");
-        printf("%d\n", newPoly.degree);
-        for (int i = newPoly.degree; i > 0; i--) {
-            printf("%.1f * x^%d + ", newPoly.coefficients[i], i);
-        }
-        printf("%.1f\n\n", newPoly.coefficients[0]);
+        // printf("New Polynomial:\n");
+        // printf("%d\n", newPoly.degree);
+        // for (int i = newPoly.degree; i > 0; i--) {
+        //     printf("%.1f * x^%d + ", newPoly.coefficients[i], i);
+        // }
+        // printf("%.1f\n\n", newPoly.coefficients[0]);
 
         derivative(newPoly, &polyDeriv);
-        printf("Deriv Polynomial:\n");
-        printf("%d\n", polyDeriv.degree);
-        for (int i = polyDeriv.degree; i > 0; i--) {
-            printf("%.1f * x^%d + ", polyDeriv.coefficients[i], i);
-        }
-        printf("%.1f\n\n", polyDeriv.coefficients[0]);
+        // printf("Deriv Polynomial:\n");
+        // printf("%d\n", polyDeriv.degree);
+        // for (int i = polyDeriv.degree; i > 0; i--) {
+        //     printf("%.1f * x^%d + ", polyDeriv.coefficients[i], i);
+        // }
+        // printf("%.1f\n\n", polyDeriv.coefficients[0]);
     }
 
     qsort(roots, n, sizeof(double), compare);
