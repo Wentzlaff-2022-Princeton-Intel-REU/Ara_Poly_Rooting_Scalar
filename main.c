@@ -14,8 +14,8 @@ int main() {
     double crit_conversion = 1e-14;
 
     Polynomial_t poly;
-    poly.degree = 2;
-    double arr[3] = {1, 0, 1};
+    poly.degree = 5;
+    double arr[6] = {1, 3, -23, -51, 94, 120};
     poly.coefficients = arr;
 
     printf("Polynomial:\n");
