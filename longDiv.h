@@ -9,4 +9,4 @@
 
 /* performs long division on a polynomial dividend and a linear
 polynomial divisor and returns a polynomial quotient */
-void longDiv(Polynomial_t* poly, double root, double diff);
+Polynomial_t longDiv(Polynomial_t poly, double root, double diff);

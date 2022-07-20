@@ -10,5 +10,5 @@
 /* The derivative function takes in a Polynomial_t object
 as input, differentiates it, and returns a differentiated
 Polynomial_t object as output. */
-void derivative(Polynomial_t myPoly, Polynomial_t* differentiatedPoly);
+Polynomial_t derivative(Polynomial_t myPoly);
 

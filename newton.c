@@ -37,11 +37,7 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
     double oldDiff = 0;
 
     Polynomial_t newPoly = poly;
-    Polynomial_t polyDeriv;
-    double arr[poly.degree];
-    polyDeriv.coefficients = arr;
-
-    derivative(poly, &polyDeriv);
+    Polynomial_t polyDeriv = derivative(poly);
     
     for (int i = 0; i < n; i++) {
       bool firstLoop = true;
@@ -60,8 +56,8 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
         } while (diff > convCrit);
         roots[i] = xGuess;
 
-        longDiv(&newPoly, xGuess, convCrit);
-        derivative(newPoly, &polyDeriv);
+        newPoly = longDiv(newPoly, xGuess, convCrit);
+        newPoly = derivative(newPoly);
     }
 
     qsort(roots, n, sizeof(double), compare);
