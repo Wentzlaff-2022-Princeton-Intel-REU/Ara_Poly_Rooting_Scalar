@@ -44,9 +44,5 @@ int main() {
     }
     printf("test 8\n");
     
-    // for (int i = 0; i <= polyd.degree; i++) {
-    //     printf("%lf \n", polyd.coefficients[i]);
-    // }
-
     return 0;
 }
