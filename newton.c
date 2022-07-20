@@ -71,7 +71,7 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
         printf("test 9\n");
 
         newPoly = longDiv(newPoly, xGuess, convCrit);
-        polyDeriv = derivative(newPoly);
+        derivative(newPoly, &polyDeriv);
     }
 
     qsort(roots, n, sizeof(double), compare);
