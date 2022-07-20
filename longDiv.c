@@ -22,6 +22,9 @@ void longDiv(Polynomial_t* poly, double root, double diff) {
     //     return;
     // }
 
+    double arr2 [poly.degree];
+    poly.coefficients = arr2;
+
     poly->coefficients = a_n;
     for (int i = n; i >= 0; i--) {
         printf("i = %d, a_n[i] = %.1f\n", i, poly->coefficients[i]);
