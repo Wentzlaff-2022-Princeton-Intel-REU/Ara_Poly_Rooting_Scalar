@@ -22,7 +22,7 @@ void longDiv(Polynomial_t* poly, double root, double diff) {
     //     return;
     // }
 
-    double arr2 [poly.degree];
+    double arr2 [n];
     poly->coefficients = arr2;
 
     poly->coefficients = a_n;
