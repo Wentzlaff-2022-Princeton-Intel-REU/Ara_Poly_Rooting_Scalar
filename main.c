@@ -23,7 +23,7 @@ int main() {
     }
     printf("%.1f\n\n", poly.coefficients[0]);
 
-    double roots [poly.degree];
+    double roots[poly.degree];
     start_timer();
     newton(poly, &roots, crit_conversion);
     stop_timer();
