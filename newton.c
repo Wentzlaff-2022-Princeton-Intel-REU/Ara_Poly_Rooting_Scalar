@@ -24,7 +24,7 @@ static int compare(const void * a, const void * b) {
     return 0;  
 }
 
-double[] newton(Polynomial_t poly, double convCrit) {
+double* newton(Polynomial_t poly, double convCrit) {
     int n = poly.degree;
     double roots[n];
 
