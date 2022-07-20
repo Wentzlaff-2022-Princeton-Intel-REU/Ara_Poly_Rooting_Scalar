@@ -24,7 +24,7 @@ int main() {
     printf("%.1f\n\n", poly.coefficients[0]);
 
     start_timer();
-    double roots[poly.degree] = newton(poly, crit_conversion);
+    double roots[5] = newton(poly, crit_conversion);
     stop_timer();
     int64_t cycle_time = get_timer();
 
