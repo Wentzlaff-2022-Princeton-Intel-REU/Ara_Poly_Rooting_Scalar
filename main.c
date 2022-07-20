@@ -34,9 +34,9 @@ int main() {
     }
     else {
         for (int i = 0; i < poly.degree; i++) {
-            // if (roots[i] == DBL_MAX) {
-            //     break;
-            // }
+            if (roots[i] == DBL_MAX) {
+                break;
+            }
             printf("The root approximation is: %.3f \n", roots[i]);
         }
     }

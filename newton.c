@@ -50,7 +50,7 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
 
           if (!firstLoop && diff > oldDiff && fabs(diff - oldDiff) > 1) {
             return;
-          };
+          }
 
           firstLoop = false;
         } while (diff > convCrit);
