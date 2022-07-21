@@ -48,11 +48,11 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
     // printf("%.1f\n\n", newPoly.coefficients[0]);
 
     Polynomial_t polyDeriv;
-    double a_n[poly.degree];
-    polyDeriv.coefficients = a_n;
+    double arr[poly.degree];
+    polyDeriv.coefficients = arr;
     derivative(poly, &polyDeriv);
 
-    // double a_n [poly.degree];
+    double a_n [poly.degree];
     
     for (int i = 0; i < n; i++) {
     // int i = 0;
