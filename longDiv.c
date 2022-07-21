@@ -12,10 +12,10 @@
 /*--------------------------------------------------------------------*/
 
 void longDiv(Polynomial_t* poly, double* a_n, double root, double diff) {
-    int n = poly->degree - 1;
+    // int n = poly->degree - 1;
 
-    a_n[n] = poly->coefficients[n + 1];
-    for (int i = n; i > 0; i--) {
+    a_n[poly->degree - 1] = poly->coefficients[poly->degree];
+    for (int i = poly->degree - 1; i > 0; i--) {
         a_n[i - 1] = poly->coefficients[i] + root * a_n[i];
     }
 
@@ -24,7 +24,7 @@ void longDiv(Polynomial_t* poly, double* a_n, double root, double diff) {
     //     return;
     // }
 
-    poly->degree = n;
+    poly->degree -= 1;
     poly->coefficients = a_n;
     // for (int i = 0; i <= n; i++) {
     //     poly->coefficients[i] = a_n[i];

@@ -57,6 +57,7 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
     for (int i = 0; i < n; i++) {
     // int i = 0;
     // while (poly.degree > 0) {
+      printf("Degree: %d\n", poly.degree);
       bool firstLoop = true;
         do {
           oldXGuess = xGuess;
