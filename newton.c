@@ -71,7 +71,8 @@ double* newton(Polynomial_t poly, double convCrit) {
         } while (diff > convCrit);
         roots[i] = xGuess;
 
-        longDiv(&poly, xGuess, convCrit);
+        double a_n [poly.degree];
+        longDiv(&poly, &a_n, xGuess, convCrit);
         printf("New Polynomial:\n");
         printf("%d\n", poly.degree);
         printPoly(poly);
