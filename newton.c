@@ -30,7 +30,7 @@ double* newton(Polynomial_t poly, double convCrit) {
 
     for (int i = 0; i < n; i++) {
       roots[i] = DBL_MAX;
-      printf("%.3f", DBL_MAX);
+      printf("hi %.3f\n", DBL_MAX);
     }
 
     double xGuess = (double) rand()/ (double) rand();
