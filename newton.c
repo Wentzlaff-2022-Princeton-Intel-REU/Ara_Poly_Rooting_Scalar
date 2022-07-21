@@ -39,7 +39,11 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
     double diff = xGuess;
     double oldDiff = 0;
 
-    // Polynomial_t newPoly = poly;
+    Polynomial_t newPoly;
+    newPoly.degree = poly.degree;
+    double a_n [poly.degree] = poly.coefficients;
+    newPoly.coefficients = a_n;
+
     // printf("New Polynomial:\n");
     // printf("%d\n", newPoly.degree);
     // for (int i = newPoly.degree; i > 0; i--) {
@@ -50,18 +54,16 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
     Polynomial_t polyDeriv;
     double arr[poly.degree + 1];
     polyDeriv.coefficients = arr;
-    derivative(poly, &polyDeriv);
-
-    double a_n [poly.degree];
+    derivative(newPoly, &polyDeriv);
     
     for (int i = 0; i < n; i++) {
     // int i = 0;
     // while (poly.degree > 0) {
-        printf("Degree: %d\n", poly.degree);
+        printf("Degree: %d\n", newPoly.degree);
         bool firstLoop = true;
             do {
             oldXGuess = xGuess;
-            xGuess -= horner(poly, xGuess) / horner(polyDeriv, xGuess);
+            xGuess -= horner(newPoly, xGuess) / horner(polyDeriv, xGuess);
             oldDiff = diff;
             diff = fabs(xGuess - oldXGuess);
 
@@ -89,7 +91,7 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
 
             // printf("guess: %.3f, oldGuess: %.3f, oldDiff: %.3f, diff: %.3f\n", xGuess, oldXGuess, oldDiff, diff);
             // double a_n [poly.degree];
-            longDiv(&poly, a_n, xGuess, convCrit);
+            longDiv(&newPoly, a_n, xGuess, convCrit);
             // printf("New Polynomial:\n");
             // printf("%d\n", poly.degree);
             // printPoly(poly);
@@ -98,7 +100,7 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
             // }
             // printf("%.1f\n\n", poly.coefficients[0]);
 
-            derivative(poly, &polyDeriv);
+            derivative(newPoly, &polyDeriv);
             // printPoly(polyDeriv);
             // printf("Deriv Polynomial:\n");
             // printf("%d\n", polyDeriv.degree);
