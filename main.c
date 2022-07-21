@@ -3,6 +3,7 @@
 /*--------------------------------------------------------------------*/
 
 #include <float.h>
+// #include <stdio.h>
 #include "newton.h"
 #include "printf.h"
 #include "printPoly.h"
@@ -26,7 +27,7 @@ int main() {
     // printf("%.1f\n\n", poly.coefficients[0]);
     double roots [poly.degree];
     start_timer();
-    newton(poly, &roots, crit_conversion);
+    newton(poly, roots, crit_conversion);
     stop_timer();
     int64_t cycle_time = get_timer();
 
