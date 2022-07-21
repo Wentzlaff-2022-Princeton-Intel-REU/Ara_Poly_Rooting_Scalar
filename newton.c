@@ -11,6 +11,7 @@
 #include "longDiv.h"
 #include "newton.h"
 #include "printf.h"
+#include "printPoly.h"
 
 /*--------------------------------------------------------------------*/
 
@@ -30,7 +31,6 @@ double* newton(Polynomial_t poly, double convCrit) {
 
     for (int i = 0; i < n; i++) {
       roots[i] = DBL_MAX;
-      printf("hi %.3f\n", DBL_MAX);
     }
 
     double xGuess = (double) rand()/ (double) rand();
@@ -63,6 +63,7 @@ double* newton(Polynomial_t poly, double convCrit) {
 
           if (!firstLoop && diff > oldDiff && fabs(diff - oldDiff) > 1) {
             printf("exited too soon!\n");
+            qsort(roots, i, sizeof(double), compare);
             return roots;
           }
 
@@ -71,8 +72,9 @@ double* newton(Polynomial_t poly, double convCrit) {
         roots[i] = xGuess;
 
         longDiv(&poly, xGuess, convCrit);
-        // printf("New Polynomial:\n");
-        // printf("%d\n", poly.degree);
+        printf("New Polynomial:\n");
+        printf("%d\n", poly.degree);
+        printPoly(poly);
         // for (int i = poly.degree; i > 0; i--) {
         //     printf("%x * x^%d + ", poly.coefficients[i], i);
         // }

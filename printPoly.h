@@ -1,12 +1,11 @@
 #pragma once
 /*------------------------------------------------------------*/
-/* reading.h                                                  */
+/* printPoly.h                                                */
 /*------------------------------------------------------------*/
 
 #include "polynomial.h"
 
 /*------------------------------------------------------------*/
 
-/* Reads n and list of a_n from STDIN to create and return
-Polynoimial_t struct. */
-Polynomial_t reading(void);
+// Prints the given polynomial.
+void printPoly(Polynomial_t poly);

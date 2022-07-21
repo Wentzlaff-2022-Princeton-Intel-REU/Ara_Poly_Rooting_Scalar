@@ -5,6 +5,7 @@
 #include <float.h>
 #include "newton.h"
 #include "printf.h"
+#include "printPoly.h"
 #include "runtime.h"
 
 /*--------------------------------------------------------------------*/
@@ -18,10 +19,11 @@ int main() {
     poly.coefficients = arr;
 
     printf("Polynomial:\n");
-    for (int i = poly.degree; i > 0; i--) {
-        printf("%.1f * x^%d + ", poly.coefficients[i], i);
-    }
-    printf("%.1f\n\n", poly.coefficients[0]);
+    printPoly(poly);
+    // for (int i = poly.degree; i > 0; i--) {
+    //     printf("%.1f * x^%d + ", poly.coefficients[i], i);
+    // }
+    // printf("%.1f\n\n", poly.coefficients[0]);
 
     start_timer();
     double* roots = newton(poly, crit_conversion);
