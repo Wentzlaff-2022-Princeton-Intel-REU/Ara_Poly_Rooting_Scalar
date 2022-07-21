@@ -13,11 +13,11 @@
 
 void longDiv(Polynomial_t* poly, double* a_n, double root, double diff) {
     // int n = poly->degree - 1;
+    printf("Inside longDiv\n");
+    printPoly(poly);
 
     a_n[poly->degree - 1] = poly->coefficients[poly->degree];
-    printf("index = %d\n", (poly->degree - 1));
     for (int i = poly->degree - 1; i > 0; i--) {
-        printf("index = %d\n", (i - 1));
         a_n[i - 1] = poly->coefficients[i] + root * a_n[i];
     }
 
@@ -28,10 +28,11 @@ void longDiv(Polynomial_t* poly, double* a_n, double root, double diff) {
 
     poly->degree -= 1;
     poly->coefficients = a_n;
-    // for (int i = 0; i <= n; i++) {
-    //     poly->coefficients[i] = a_n[i];
-    // }
-    printf("Root: %.3f\n", root);
+    for (int i = poly.degree; i >= 0; i--) {
+        printf("a_n[i] = %.3f, ", a_n[i]);
+        // poly->coefficients[i] = a_n[i];
+    }
+    printf("\nRoot: %.3f\n", root);
     printPoly(*poly);
     // for (int i = n; i >= 0; i--) {
     //     printf("i = %d, a_n[i] = %x\n", i, poly->coefficients[i]);
