@@ -5,7 +5,6 @@
 #include <float.h>
 #include <math.h>
 #include <stdbool.h>
-// #include <stdio.h>
 #include <stdlib.h>
 #include "derivative.h"
 #include "horner.h"
@@ -38,15 +37,12 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
     double diff = xGuess;
     double oldDiff = 0;
 
-    double a_n [poly.degree + 1];
-
     Polynomial_t polyDeriv;
-    double arr[poly.degree + 1];
-    polyDeriv.coefficients = arr;
+    double a_n [poly.degree + 1];
+    polyDeriv.coefficients = a_n;
     derivative(poly, &polyDeriv);
     
     for (int i = 0; i < n; i++) {
-        printf("Degree: %d\n", poly.degree);
         bool firstLoop = true;
             do {
                 oldXGuess = xGuess;
@@ -54,11 +50,7 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
                 oldDiff = diff;
                 diff = fabs(xGuess - oldXGuess);
 
-                // printf("guess: %.3f, oldGuess: %.3f, oldDiff: %.3f, diff: %.3f\n", xGuess, oldXGuess, oldDiff, diff);
-
                 if (!firstLoop && diff > oldDiff && fabs(diff - oldDiff) > 1) {
-                    printf("exited too soon!\n");
-                    printf("Diff of diffs: %.3f\n", (fabs(diff - oldDiff)));
                     qsort(roots, n, sizeof(double), compare);
                     return;
                 }
@@ -67,10 +59,8 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
             } while (diff > convCrit);
             roots[i] = xGuess;
 
-            longDiv(&poly, arr, xGuess, convCrit);
+            longDiv(&poly, a_n, xGuess);
             derivative(poly, &polyDeriv);
     }
     qsort(roots, n, sizeof(double), compare);
-
-    // return roots;
 }
