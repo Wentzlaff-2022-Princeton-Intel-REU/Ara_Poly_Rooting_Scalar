@@ -56,8 +56,9 @@ double* newton(Polynomial_t poly, double convCrit) {
           oldXGuess = xGuess;
           xGuess -= horner(poly, xGuess) / horner(polyDeriv, xGuess);
           oldDiff = diff;
-          diff = fabs(xGuess - oldXGuess);;
-         // printf("guess: %lf, oldGuess: %lf, oldDiff: %lf, diff: %lf\n", xGuess, oldXGuess, oldDiff, diff);
+          diff = fabs(xGuess - oldXGuess);
+
+         printf("guess: %.3f, oldGuess: %.3f, oldDiff: %.3f, diff: %.3f\n", xGuess, oldXGuess, oldDiff, diff);
 
           if (!firstLoop && diff > oldDiff && fabs(diff - oldDiff) > 1) {
             printf("exited too soon!\n");
