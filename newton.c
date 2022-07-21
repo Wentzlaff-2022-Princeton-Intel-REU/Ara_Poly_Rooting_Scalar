@@ -74,11 +74,11 @@ double* newton(Polynomial_t poly, double convCrit) {
         longDiv(&poly, xGuess, convCrit);
         printf("New Polynomial:\n");
         printf("%d\n", poly.degree);
-        // printPoly(poly);
-        for (int i = poly.degree; i > 0; i--) {
-            printf("%.3f * x^%d + ", poly.coefficients[i], i);
-        }
-        printf("%.1f\n\n", poly.coefficients[0]);
+        printPoly(poly);
+        // for (int i = poly.degree; i > 0; i--) {
+        //     printf("%.3f * x^%d + ", poly.coefficients[i], i);
+        // }
+        // printf("%.1f\n\n", poly.coefficients[0]);
 
         derivative(poly, &polyDeriv);
         // printf("Deriv Polynomial:\n");
