@@ -90,5 +90,5 @@ double* newton(Polynomial_t poly, double convCrit) {
     }
     qsort(roots, n, sizeof(double), compare);
 
-    return roots;
+    return &roots;
 }
