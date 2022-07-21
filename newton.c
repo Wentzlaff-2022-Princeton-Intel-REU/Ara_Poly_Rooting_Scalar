@@ -63,7 +63,8 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
 
           if (!firstLoop && diff > oldDiff && fabs(diff - oldDiff) > 1) {
             printf("exited too soon!\n");
-            qsort(roots, i, sizeof(double), compare);
+            printf("Diff of diffs: %.3f\nn", (fabs(diff - oldDiff)));
+            qsort(roots, n, sizeof(double), compare);
             return;
           }
 
