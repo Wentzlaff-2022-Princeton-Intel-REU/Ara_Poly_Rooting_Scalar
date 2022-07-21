@@ -27,7 +27,7 @@ void longDiv(Polynomial_t* poly, double* a_n, double root, double diff) {
     // for (int i = 0; i <= n; i++) {
     //     poly->coefficients[i] = a_n[i];
     // }
-    printPoly(*poly);
+    // printPoly(*poly);
     // for (int i = n; i >= 0; i--) {
     //     printf("i = %d, a_n[i] = %x\n", i, poly->coefficients[i]);
     // }

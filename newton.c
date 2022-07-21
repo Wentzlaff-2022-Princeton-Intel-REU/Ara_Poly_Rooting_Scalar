@@ -61,7 +61,7 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
 
           // printf("guess: %.3f, oldGuess: %.3f, oldDiff: %.3f, diff: %.3f\n", xGuess, oldXGuess, oldDiff, diff);
 
-          if (!firstLoop && diff > oldDiff && fabs(diff - oldDiff) > 2) {
+          if (!firstLoop && diff > oldDiff && fabs(diff - oldDiff) > 1) {
             printf("exited too soon!\n");
             printf("Diff of diffs: %.3f\n", (fabs(diff - oldDiff)));
             qsort(roots, n, sizeof(double), compare);
@@ -75,7 +75,7 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
         double a_n [poly.degree];
         // printf("guess: %.3f, oldGuess: %.3f, oldDiff: %.3f, diff: %.3f\n", xGuess, oldXGuess, oldDiff, diff);
         longDiv(&poly, &a_n, xGuess, convCrit);
-        printf("New Polynomial:\n");
+        // printf("New Polynomial:\n");
         // printf("%d\n", poly.degree);
         // printPoly(poly);
         // for (int i = poly.degree; i > 0; i--) {
