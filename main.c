@@ -24,9 +24,9 @@ int main() {
     //     printf("%.1f * x^%d + ", poly.coefficients[i], i);
     // }
     // printf("%.1f\n\n", poly.coefficients[0]);
-
+    double roots [poly.degree];
     start_timer();
-    double* roots = newton(poly, crit_conversion);
+    newton(poly, & roots, crit_conversion);
     stop_timer();
     int64_t cycle_time = get_timer();
 

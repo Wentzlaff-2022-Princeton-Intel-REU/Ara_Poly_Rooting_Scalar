@@ -25,9 +25,9 @@ static int compare(const void * a, const void * b) {
     return 0;  
 }
 
-double* newton(Polynomial_t poly, double convCrit) {
+void newton(Polynomial_t poly, double* roots, double convCrit) {
     int n = poly.degree;
-    double roots[n];
+    // double roots[n];
 
     for (int i = 0; i < n; i++) {
       roots[i] = DBL_MAX;
