@@ -41,7 +41,10 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
 
     Polynomial_t newPoly;
     newPoly.degree = poly.degree;
-    double a_n [poly.degree] = poly.coefficients;
+    double a_n [poly.degree];
+    for (int i = 0; i <= n; i++) {
+        a_n[i] = poly.coefficients[i];
+    }
     newPoly.coefficients = a_n;
 
     // printf("New Polynomial:\n");
