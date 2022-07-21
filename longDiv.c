@@ -33,10 +33,10 @@ void longDiv(Polynomial_t* poly, double* a_n, double root, double diff) {
     // }
 
     poly->degree -= 1;
-    poly->coefficients = a_n;
+    // poly->coefficients = a_n;
     for (int i = poly->degree; i >= 0; i--) {
-        printf("a_n[i] = %.3f, ", a_n[i]);
-        // poly->coefficients[i] = a_n[i];
+        // printf("a_n[i] = %.3f, ", a_n[i]);
+        poly->coefficients[i] = a_n[i];
     }
     printf("\nRoot: %.3f\n", root);
     printPoly(*poly);
