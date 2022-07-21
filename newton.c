@@ -54,9 +54,9 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
 
     double a_n [poly.degree];
     
-    for (int i = 0; i < n; i++) {
-    // int i = 0;
-    // while (poly.degree > 0) {
+    // for (int i = 0; i < n; i++) {
+    int i = 0;
+    while (poly.degree > 0) {
       bool firstLoop = true;
         do {
           oldXGuess = xGuess;
@@ -75,20 +75,20 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
 
           firstLoop = false;
         } while (diff > convCrit);
-        roots[i] = xGuess;
+        // roots[i] = xGuess;
 
-        // int degree = poly.degree;
-        // double a_n [poly.degree];
-        // longDiv(&poly, a_n, xGuess, convCrit);
+        int degree = poly.degree;
+        double a_n [poly.degree];
+        longDiv(&poly, a_n, xGuess, convCrit);
 
-        // if (degree != poly.degree) {
-        //   roots[i] = xGuess;
-        //   i++;
-        // }
+        if (degree != poly.degree) {
+          roots[i] = xGuess;
+          i++;
+        }
 
         // printf("guess: %.3f, oldGuess: %.3f, oldDiff: %.3f, diff: %.3f\n", xGuess, oldXGuess, oldDiff, diff);
         // double a_n [poly.degree];
-        longDiv(&poly, a_n, xGuess, convCrit);
+        // longDiv(&poly, a_n, xGuess, convCrit);
         // printf("New Polynomial:\n");
         // printf("%d\n", poly.degree);
         // printPoly(poly);
@@ -98,7 +98,7 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
         // printf("%.1f\n\n", poly.coefficients[0]);
 
         derivative(poly, &polyDeriv);
-        printPoly(polyDeriv);
+        // printPoly(polyDeriv);
         // printf("Deriv Polynomial:\n");
         // printf("%d\n", polyDeriv.degree);
         // for (int i = polyDeriv.degree; i > 0; i--) {
