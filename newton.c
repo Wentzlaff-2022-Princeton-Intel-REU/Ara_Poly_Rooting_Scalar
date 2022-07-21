@@ -89,9 +89,9 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
         // printf("guess: %.3f, oldGuess: %.3f, oldDiff: %.3f, diff: %.3f\n", xGuess, oldXGuess, oldDiff, diff);
         // double a_n [poly.degree];
         longDiv(&poly, a_n, xGuess, convCrit);
-        printf("New Polynomial:\n");
-        printf("%d\n", poly.degree);
-        printPoly(poly);
+        // printf("New Polynomial:\n");
+        // printf("%d\n", poly.degree);
+        // printPoly(poly);
         // for (int i = poly.degree; i > 0; i--) {
         //     printf("%.3f * x^%d + ", poly.coefficients[i], i);
         // }
