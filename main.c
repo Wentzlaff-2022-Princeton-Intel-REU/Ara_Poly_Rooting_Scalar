@@ -28,7 +28,7 @@ int main() {
     int64_t cycle_time = get_timer();
 
     if (roots[0] == DBL_MAX) {
-        printf("Your polynomial has no roots.\n");
+        printf("Your polynomial has no real roots.\n");
     }
     else {
         for (int i = 0; i < poly.degree; i++) {
