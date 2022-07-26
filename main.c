@@ -139,7 +139,7 @@ int main() {
         }
         else if (i == 10) {
             poly.degree = 10;
-            double inForArr[] = {1, 4, -10, -73, -87, 74, 144, -30, -67, 5, 10};
+            double inForArr[] = {2, -9, -35, 194, 32, -805, 447, 478, -247, -64};
             poly.coefficients = inForArr;
             double roots[poly.degree];
             double convCrit = 1e-14;
