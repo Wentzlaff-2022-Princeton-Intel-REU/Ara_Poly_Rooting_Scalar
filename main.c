@@ -14,7 +14,7 @@ int main() {
     
     Polynomial_t poly;
     poly.degree = 2;
-    double arr[] = {-1,0,1};
+    double arr[] = {-1,-0,1};
     poly.coefficients = arr;
 
     for (int i = 2; i < 30; i++){
