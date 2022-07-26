@@ -22,6 +22,7 @@ int main() {
         double roots[poly.degree];
         double convCrit = 1e-14;
 
+        printPoly(poly);
         start_timer();
         newton(poly, roots, convCrit);
         stop_timer();
@@ -29,13 +30,13 @@ int main() {
 
         printf("\n %d th degree Runtime (cycles): %d\n", i, cycleTime);
 
-        if (i == 4) {
+        if (i == 3) {
             poly.degree = 3;
             double inForArr[] = {-5, -25, -44, -26};
             poly.coefficients = inForArr;
         }
 
-        else if (i == 3) {
+        else if (i == 4) {
             poly.degree = 4;
             double inForArr[] = {3, 25, 77, 91, 28};
             poly.coefficients = inForArr;
