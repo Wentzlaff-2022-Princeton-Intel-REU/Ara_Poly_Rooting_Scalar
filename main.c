@@ -154,7 +154,7 @@ int main() {
 
         else if (i == 11) {
             poly.degree = 11;
-            double inForArr[] = {2, -5, -37, 97, 331, -565, -1417, 1087, 2758, -286, -1904, -579};
+            double inForArr[] = {-5, 19, 200, -869, -2823, 13378, 14223, -82393, -25326, 216251, 8292, -199312};
             poly.coefficients = inForArr;
             double roots[poly.degree];
             double convCrit = 1e-14;
