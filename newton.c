@@ -43,7 +43,8 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
     polyDeriv.coefficients = a_n;
     derivative(poly, &polyDeriv);
     
-    for (int i = 0; i < n; i++) {
+    int rootIndex = 0;
+    while (poly.degree > 0) {
         bool firstLoop = true;
         do {
             oldGuess = guess;
@@ -67,8 +68,8 @@ void newton(Polynomial_t poly, double* roots, double convCrit) {
             /* save the found root (guess) and divide out the root
             (longDiv) to reduce the polynomial and its derivative */
             roots[rootIndex] = guess;
-            poly = longDiv(poly, guess, convCrit);
-            polyDeriv = derivative(poly);
+            longDiv(&poly, a_n, xGuess[j], convCrit);
+            derivative(poly, &polyDeriv);
             rootIndex++;
         }
     }
