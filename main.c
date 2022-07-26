@@ -21,7 +21,7 @@ int main() {
         
         if (i == 2) {
             poly.degree = 2;
-            double inForArr[] = {-1,0,1};
+            double inForArr[] = {-1,-0,1};
             poly.coefficients = inForArr;
             double roots[poly.degree];
             double convCrit = 1e-14;
