@@ -13,33 +13,37 @@
 int main() {
     Polynomial_t poly;
     poly.degree = 2;
-    double arr[] = {-702, 0, 1};
+    double arr[] = {-1,0,1};
     poly.coefficients = arr;
 
     double roots[poly.degree];
     double convCrit = 1e-14;
 
-    printf("Polynomial:\n");
-    printPoly(poly);
+    // printf("Polynomial:\n");
+    // printPoly(poly);
     
     start_timer();
     newton(poly, roots, convCrit);
     stop_timer();
     int64_t cycleTime = get_timer();
 
-    if (poly.degree == 0 || roots[0] == DBL_MAX) {
-        printf("Your polynomial has no real roots.\n");
-    }
-    else {
-        for (int i = 0; i < poly.degree; i++) {
-            if (roots[i] == DBL_MAX) {
-                break;
-            }
-            printf("The root approximation is: %.18f\n", roots[i]);
-        }
-    }
+    printf("\n Runtime (cycles): %d\n", cycleTime);
 
-    printf("\nRuntime (cycles): %d\n", cycleTime);
+
+
+    // if (poly.degree == 0 || roots[0] == DBL_MAX) {
+    //     printf("Your polynomial has no real roots.\n");
+    // }
+    // else {
+    //     for (int i = 0; i < poly.degree; i++) {
+    //         if (roots[i] == DBL_MAX) {
+    //             break;
+    //         }
+    //         printf("The root approximation is: %.18f\n", roots[i]);
+    //     }
+    // }
+
+    // printf("\nRuntime (cycles): %d\n", cycleTime);
     
     return 0;
 }
