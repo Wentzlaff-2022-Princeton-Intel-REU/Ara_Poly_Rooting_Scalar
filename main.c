@@ -155,15 +155,29 @@ int main() {
 
         if (i == 11) {
             poly.degree = 11;
-            double inForArr[] = {1, -5, -29, 99, -35, -133, 118, 8, -34, 6, 1, -0};
+            double inForArr[] = {5, -59, 129, 1082, -5341, -287, 43521, -72925, -52591, 253246, -240427, 71796};
             poly.coefficients = inForArr;
             double roots[poly.degree];
             double convCrit = 1e-14;
+
+            printPoly(poly);
 
             start_timer();
             newton(poly, roots, convCrit);
             stop_timer();
             int64_t cycleTime = get_timer();
+
+            if (poly.degree == 0 || roots[0] == DBL_MAX) {
+        printf("Your polynomial has no real roots.\n");
+    }
+    else {
+        for (int i = 0; i < poly.degree; i++) {
+            if (roots[i] == DBL_MAX) {
+                break;
+            }
+            printf("The root approximation is: %.18f\n", roots[i]);
+        }
+    }
 
             printf("\n 11 th degree Runtime (cycles): %d\n", cycleTime);
         }
@@ -175,10 +189,23 @@ int main() {
             double roots[poly.degree];
             double convCrit = 1e-14;
 
+            printPoly(poly);
+
             start_timer();
             newton(poly, roots, convCrit);
             stop_timer();
             int64_t cycleTime = get_timer();
+              if (poly.degree == 0 || roots[0] == DBL_MAX) {
+        printf("Your polynomial has no real roots.\n");
+    }
+    else {
+        for (int i = 0; i < poly.degree; i++) {
+            if (roots[i] == DBL_MAX) {
+                break;
+            }
+            printf("The root approximation is: %.18f\n", roots[i]);
+        }
+    }
 
             printf("\n 12 th degree Runtime (cycles): %d\n", cycleTime);
         }
