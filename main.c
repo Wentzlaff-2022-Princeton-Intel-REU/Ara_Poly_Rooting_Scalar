@@ -66,7 +66,7 @@ int main() {
         //     printf("\n %d th degree Runtime (cycles): %d\n", i, cycleTime);
         // }
 
-        else if (i == 5) {
+         if (i == 5) {
             poly.degree = 5;
             double inForArr[] = {-1, -6, -15, -15, -1, 5};
             poly.coefficients = inForArr;
