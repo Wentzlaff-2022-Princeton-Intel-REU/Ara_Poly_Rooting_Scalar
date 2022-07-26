@@ -19,15 +19,23 @@ int main() {
 
     for (int i = 2; i < 20; i++){
         
-       
+        double roots[poly.degree];
+        double convCrit = 1e-14;
 
-        if (i == 3) {
+        start_timer();
+        newton(poly, roots, convCrit);
+        stop_timer();
+        int64_t cycleTime = get_timer();
+
+        printf("\n %d th degree Runtime (cycles): %d\n", i, cycleTime);
+
+        if (i == 4) {
             poly.degree = 3;
             double inForArr[] = {-5, -25, -44, -26};
             poly.coefficients = inForArr;
         }
 
-        else if (i == 4) {
+        else if (i == 3) {
             poly.degree = 4;
             double inForArr[] = {3, 25, 77, 91, 28};
             poly.coefficients = inForArr;
@@ -45,15 +53,7 @@ int main() {
             poly.coefficients = inForArr;
         }
 
-        double roots[poly.degree];
-        double convCrit = 1e-14;
-
-        start_timer();
-        newton(poly, roots, convCrit);
-        stop_timer();
-        int64_t cycleTime = get_timer();
-
-        printf("\n %d th degree Runtime (cycles): %d\n", i, cycleTime);
+       
 
 
     }
