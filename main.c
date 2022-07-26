@@ -119,7 +119,9 @@ int main() {
             }
             printf("The root approximation is: %.18f\n", roots[i]);
         }
-            printf("\n %d th degree Runtime (cycles): %d\n", i, cycleTime);
+    }
+
+    printf("\n %d th degree Runtime (cycles): %d\n", i, cycleTime);
         }
     //     else if (i == 8) {
     //         poly.degree = 8;
