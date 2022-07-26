@@ -11,21 +11,21 @@
 /*--------------------------------------------------------------------*/
 
 int main() {
-    double crit_conversion = 1e-14;
-
     Polynomial_t poly;
     poly.degree = 3;
     double arr[] = {3,1,3,1};
     poly.coefficients = arr;
 
+    double roots[poly.degree];
+    double convCrit = 1e-14;
+
     printf("Polynomial:\n");
     printPoly(poly);
     
-    double roots [poly.degree];
     start_timer();
-    newton(poly, roots, crit_conversion);
+    newton(poly, roots, convCrit);
     stop_timer();
-    int64_t cycle_time = get_timer();
+    int64_t cycleTime = get_timer();
 
     if (roots[0] == DBL_MAX) {
         printf("Your polynomial has no real roots.\n");
@@ -39,7 +39,7 @@ int main() {
         }
     }
 
-    printf("\nRuntime (cycles): %d\n", cycle_time);
+    printf("\nRuntime (cycles): %d\n", cycleTime);
     
     return 0;
 }
