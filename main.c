@@ -220,8 +220,8 @@ int main() {
     //     }
     // }
 
-            printf("\n 12 th degree Runtime (cycles): %d\n", cycleTime);
-        }
+        //     printf("\n 12 th degree Runtime (cycles): %d\n", cycleTime);
+        // }
          if (i == 13) {
             poly.degree = 13;
             double inForArr[] = {214720, -563827, 169365, 442653, -2, -173647, 39627, 39552, -1546, -4599, -521, 182, 47, 3};
