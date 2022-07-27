@@ -222,111 +222,111 @@ int main() {
 
         //     printf("\n 12 th degree Runtime (cycles): %d\n", cycleTime);
         // }
-         if (i == 13) {
-            poly.degree = 13;
-            double inForArr[] = {214720, -563827, 169365, 442653, -2, -173647, 39627, 39552, -1546, -4599, -521, 182, 47, 3};
-            poly.coefficients = inForArr;
-            double roots[poly.degree];
-            double convCrit = 1e-14;
+        //  if (i == 13) {
+        //     poly.degree = 13;
+        //     double inForArr[] = {214720, -563827, 169365, 442653, -2, -173647, 39627, 39552, -1546, -4599, -521, 182, 47, 3};
+        //     poly.coefficients = inForArr;
+        //     double roots[poly.degree];
+        //     double convCrit = 1e-14;
 
-            start_timer();
-            newton(poly, roots, convCrit);
-            stop_timer();
-            int64_t cycleTime = get_timer();
+        //     start_timer();
+        //     newton(poly, roots, convCrit);
+        //     stop_timer();
+        //     int64_t cycleTime = get_timer();
 
-            printf("\n 13 th degree Runtime (cycles): %d\n", cycleTime);
-        }
+        //     printf("\n 13 th degree Runtime (cycles): %d\n", cycleTime);
+        // }
 
-        else if (i == 14) {
-            poly.degree = 14;
-            double inForArr[] = {-206, 636, 4103, -973, -17572, -12225, 11283, 9945, -3449, -2933, 672, 357, -74, -14, 3};
-            poly.coefficients = inForArr;
-            double roots[poly.degree];
-            double convCrit = 1e-14;
+        // else if (i == 14) {
+        //     poly.degree = 14;
+        //     double inForArr[] = {-206, 636, 4103, -973, -17572, -12225, 11283, 9945, -3449, -2933, 672, 357, -74, -14, 3};
+        //     poly.coefficients = inForArr;
+        //     double roots[poly.degree];
+        //     double convCrit = 1e-14;
 
-            start_timer();
-            newton(poly, roots, convCrit);
-            stop_timer();
-            int64_t cycleTime = get_timer();
+        //     start_timer();
+        //     newton(poly, roots, convCrit);
+        //     stop_timer();
+        //     int64_t cycleTime = get_timer();
 
-            printf("\n 14 th degree Runtime (cycles): %d\n", cycleTime);
-        }
+        //     printf("\n 14 th degree Runtime (cycles): %d\n", cycleTime);
+        // }
 
-        else if (i == 15) {
-            poly.degree = 15;
-            double inForArr[] = {1411, 14012, 41173, 29052, -54762, -89893, -17782, 30038, 12619, -2875, -1938, 16, 113, 8, -2, -0};
-            poly.coefficients = inForArr;
-            double roots[poly.degree];
-            double convCrit = 1e-14;
+        // else if (i == 15) {
+        //     poly.degree = 15;
+        //     double inForArr[] = {1411, 14012, 41173, 29052, -54762, -89893, -17782, 30038, 12619, -2875, -1938, 16, 113, 8, -2, -0};
+        //     poly.coefficients = inForArr;
+        //     double roots[poly.degree];
+        //     double convCrit = 1e-14;
 
-            start_timer();
-            newton(poly, roots, convCrit);
-            stop_timer();
-            int64_t cycleTime = get_timer();
+        //     start_timer();
+        //     newton(poly, roots, convCrit);
+        //     stop_timer();
+        //     int64_t cycleTime = get_timer();
 
-            printf("\n 15 th degree Runtime (cycles): %d\n", cycleTime);
-        }
+        //     printf("\n 15 th degree Runtime (cycles): %d\n", cycleTime);
+        // }
 
 
-        else if (i == 16) {
-            poly.degree = 16;
-            double inForArr[] = {32683430, -57723542, -24910159, 65687669, -61920, -26932510, 3249930, 5500254, -931502, -620346, 119171, 39113, -7952, -1285, 268, 17, -4};
-            poly.coefficients = inForArr;
-            double roots[poly.degree];
-            double convCrit = 1e-14;
+        // else if (i == 16) {
+        //     poly.degree = 16;
+        //     double inForArr[] = {32683430, -57723542, -24910159, 65687669, -61920, -26932510, 3249930, 5500254, -931502, -620346, 119171, 39113, -7952, -1285, 268, 17, -4};
+        //     poly.coefficients = inForArr;
+        //     double roots[poly.degree];
+        //     double convCrit = 1e-14;
 
-            start_timer();
-            newton(poly, roots, convCrit);
-            stop_timer();
-            int64_t cycleTime = get_timer();
+        //     start_timer();
+        //     newton(poly, roots, convCrit);
+        //     stop_timer();
+        //     int64_t cycleTime = get_timer();
 
-            printf("\n 16 th degree Runtime (cycles): %d\n", cycleTime);
-        }
+        //     printf("\n 16 th degree Runtime (cycles): %d\n", cycleTime);
+        // }
 
-        else if (i == 17) {
-            poly.degree = 17;
-            double inForArr[] = {-2135299, 2713794, 42588565, -133771735, 112270431, 14673944, -66805081, 27806800, 5377120, -7154265, 1581944, 261102, -178881, 24789, 2144, -1034, 118, -5};
-            poly.coefficients = inForArr;
-            double roots[poly.degree];
-            double convCrit = 1e-14;
+        // else if (i == 17) {
+        //     poly.degree = 17;
+        //     double inForArr[] = {-2135299, 2713794, 42588565, -133771735, 112270431, 14673944, -66805081, 27806800, 5377120, -7154265, 1581944, 261102, -178881, 24789, 2144, -1034, 118, -5};
+        //     poly.coefficients = inForArr;
+        //     double roots[poly.degree];
+        //     double convCrit = 1e-14;
 
-            start_timer();
-            newton(poly, roots, convCrit);
-            stop_timer();
-            int64_t cycleTime = get_timer();
+        //     start_timer();
+        //     newton(poly, roots, convCrit);
+        //     stop_timer();
+        //     int64_t cycleTime = get_timer();
 
-            printf("\n 17 th degree Runtime (cycles): %d\n", cycleTime);
-        }
+        //     printf("\n 17 th degree Runtime (cycles): %d\n", cycleTime);
+        // }
 
-        else if (i == 18) {
-            poly.degree = 18;
-            double inForArr[] = {6, 213, 2349, 8099, -5801, -39213, 14582, 62571, -34192, -26733, 16359, 5284, -3307, -558, 328, 30, -16, -1, 0};
-            poly.coefficients = inForArr;
-            double roots[poly.degree];
-            double convCrit = 1e-14;
+        // else if (i == 18) {
+        //     poly.degree = 18;
+        //     double inForArr[] = {6, 213, 2349, 8099, -5801, -39213, 14582, 62571, -34192, -26733, 16359, 5284, -3307, -558, 328, 30, -16, -1, 0};
+        //     poly.coefficients = inForArr;
+        //     double roots[poly.degree];
+        //     double convCrit = 1e-14;
 
-            start_timer();
-            newton(poly, roots, convCrit);
-            stop_timer();
-            int64_t cycleTime = get_timer();
+        //     start_timer();
+        //     newton(poly, roots, convCrit);
+        //     stop_timer();
+        //     int64_t cycleTime = get_timer();
 
-            printf("\n 18 th degree Runtime (cycles): %d\n", cycleTime);
-        }
+        //     printf("\n 18 th degree Runtime (cycles): %d\n", cycleTime);
+        // }
 
-        else if (i == 19) {
-            poly.degree = 19;
-            double inForArr[] = {-9674781, -5223705, 47319532, 25291139, -78584255, -41894765, 55195475, 32714564, -17408084, -12983145, 1966035, 2610161, 121695, -250430, -41475, 9607, 2783, -21, -58, -4};
-            poly.coefficients = inForArr;
-            double roots[poly.degree];
-            double convCrit = 1e-14;
+        // else if (i == 19) {
+        //     poly.degree = 19;
+        //     double inForArr[] = {-9674781, -5223705, 47319532, 25291139, -78584255, -41894765, 55195475, 32714564, -17408084, -12983145, 1966035, 2610161, 121695, -250430, -41475, 9607, 2783, -21, -58, -4};
+        //     poly.coefficients = inForArr;
+        //     double roots[poly.degree];
+        //     double convCrit = 1e-14;
 
-            start_timer();
-            newton(poly, roots, convCrit);
-            stop_timer();
-            int64_t cycleTime = get_timer();
+        //     start_timer();
+        //     newton(poly, roots, convCrit);
+        //     stop_timer();
+        //     int64_t cycleTime = get_timer();
 
-            printf("\n 19 th degree Runtime (cycles): %d\n", cycleTime);
-        }
+        //     printf("\n 19 th degree Runtime (cycles): %d\n", cycleTime);
+        // }
 
          else if (i == 20) {
             poly.degree = 20;
@@ -345,7 +345,7 @@ int main() {
 
          else if (i == 21) {
             poly.degree = 30;
-            double inForArr[] = {16, 53, 57, 127, 148, 19, 183, 185, 196, 213, 236, 275, 293, 329, 363, 38248, 404, 551, 569, 610, 612, 658, 670, 705, 759, 72468, 82246, 863230, 932451, 102400};
+            double inForArr[] = {16, 53, 57, 127, 148, 19, 183, 185, 196, 2213, 236, 275, 293, 329, 363, 38248, 404, 551, 569, 610, 612, 658, 670, 705, 759, 72468, 82246, 863230, 932451, 102400};
             poly.coefficients = inForArr;
             double roots[poly.degree];
             double convCrit = 1e-14;
@@ -360,7 +360,7 @@ int main() {
 
         else if (i == 22) {
             poly.degree = 40;
-            double inForArr[] = {28, 37, 40, 77, 129, 130, 135, 143, 179, 182, 218, 259, 263, 311, 412, 413, 4204, 472, 489, 500, 516, 531, 545, 556, 630, 661, 726, 731, 734, 738, 757, 774, 804, 808, 837, 856, 868, 965, 96236, 23971};
+            double inForArr[] = {28, 37, 40, 77, 129, 130, 135, 143, 1379, 182, 218, 259, 263, 311, 412, 413, 4204, 472, 489, 500, 516, 531, 545, 556, 630, 661, 726, 731, 734, 738, 757, 774, 804, 808, 837, 856, 868, 965, 96236, 23971};
             poly.coefficients = inForArr;
             double roots[poly.degree];
             double convCrit = 1e-14;
@@ -375,7 +375,7 @@ int main() {
 
         else if (i == 23) {
             poly.degree = 50;
-            double inForArr[] = {4, 16, 28, 42, 49, 66, 78, 103, 151, 161, 189, 228, 274, 313, 326, 332, 357, 368, 374, 386, 420, 455, 473, 500, 507, 511, 5430, 539, 596, 609, 652, 653, 659, 676, 684, 690, 696, 701, 742, 749, 790, 811, 820, 826, 910, 916, 964, 923468, 923472, 98823};
+            double inForArr[] = {4, 16, 28, 42, 49, 66, 78, 103, 151, 161, 1829, 228, 274, 313, 326, 332, 357, 368, 374, 386, 420, 455, 473, 500, 507, 511, 5430, 539, 596, 609, 652, 653, 659, 676, 684, 690, 696, 701, 742, 749, 790, 811, 820, 826, 910, 916, 964, 923468, 923472, 98823};
             poly.coefficients = inForArr;
             double roots[poly.degree];
             double convCrit = 1e-14;
@@ -390,7 +390,7 @@ int main() {
 
         else if (i == 24) {
             poly.degree = 100;
-            double inForArr[] = {81, 39, 49, 58, 19, 96, 26, 67, 67, 6, 4, 21, 32, 49, 64, 30, 43, 20, 45, 74, 58, 85, 1, 14, 56, 97, 27, 1, 34, 27, 34, 93, 10, 54, 53, 83, 65, 57, 73, 53, 15, 40, 49, 40, 41, 16, 79, 41, 41, 24, 96, 29, 33, 47, 87, 52, 88, 30, 84, 76, 23, 40, 30, 12, 41, 26, 5, 26, 65, 84, 78, 14, 21, 7, 24, 88, 26, 85, 53, 73, 60, 4, 69, 59, 81, 62, 18, 30, 57, 69, 54, 100, 92, 64, 46, 36, 61, 8233, 1420, 5923};
+            double inForArr[] = {81, 39, 49, 58, 19, 96, 26, 67, 673, 6, 4, 21, 32, 49, 64, 30, 43, 20, 45, 74, 58, 85, 1, 14, 56, 97, 27, 1, 34, 27, 34, 93, 10, 54, 53, 83, 65, 57, 73, 53, 15, 40, 49, 40, 41, 16, 79, 41, 41, 24, 96, 29, 33, 47, 87, 52, 88, 30, 84, 76, 23, 40, 30, 12, 41, 26, 5, 26, 65, 84, 78, 14, 21, 7, 24, 88, 26, 85, 53, 73, 60, 4, 69, 59, 81, 62, 18, 30, 57, 69, 54, 100, 92, 64, 46, 36, 61, 8233, 1420, 5923};
             poly.coefficients = inForArr;
             double roots[poly.degree];
             double convCrit = 1e-14;
