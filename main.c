@@ -328,7 +328,7 @@ int main() {
         //     printf("\n 19 th degree Runtime (cycles): %d\n", cycleTime);
         // }
 
-         else if (i == 20) {
+          if (i == 20) {
             poly.degree = 20;
             double inForArr[] = {12494661, -197589234, 274920953, 409146627, -718576025, -167781185, 594207052, -84382316, -200231732, 65595562, 29120233, -14593359, -1676606, 1556434, -18180, -87986, 6715, 2547, -292, -30, 4};
             poly.coefficients = inForArr;
